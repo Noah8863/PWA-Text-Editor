@@ -39,7 +39,24 @@ module.exports = () => {
 
     module: {
       rules: [
-        //TO DO
+        {
+          test: /\.css$/i,
+          user: ['style-loader', 'css-loader']
+        },
+        {
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          user: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/present-env'],
+              plugins: [
+                '@babel/plugin-proposal-object-rest-soread',
+                '@babel/transform-runtime'
+              ]
+            }
+          }
+        }
       ],
     },
   };
