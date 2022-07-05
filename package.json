@@ -7,7 +7,7 @@
     "start:dev": "",
     "start": "",
     "server": "",
-    "build": "",
+    "build": "webpack",
     "install": "",
     "client": ""
   },
@@ -20,7 +20,8 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
   }
 }
-
