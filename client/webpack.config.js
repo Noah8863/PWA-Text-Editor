@@ -21,20 +21,20 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'text-editor'
+        title: 'J.A.T.E'
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js'
+        swDest: 'src.sw.js'
       }),
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'text-editor',
-        short_name: 'text-editor',
+        name: 'J.A.T.E',
+        short_name: 'J.A.T.E',
         description: 'Text Editor',
-        start_url: '/',
-        publicPath: '/',
+        start_url: './',
+        publicPath: './',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
