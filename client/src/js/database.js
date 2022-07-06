@@ -19,20 +19,33 @@ export const putDb = async (content) => {
   const store = text.objectStore('jate')
   const request = store.put({ id: 1, value: content})
   const final = await request
-  return final
+  if (final){console.log('Data saved to DB',final.value)}
+  else {
+    console.log('Data didnt save to DB')
+  }
+  // return final
 }
-console.error('putDb not implemented');
+
 
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
+  console.log('GET from the database')
   const jateDb = await openDB('jate', 1);
   const text = jateDb.transaction('jate', 'readonly')
   const store = text.objectStore('jate')
   const request = store.get(1)
   const final = await request
-  return final?.value
+  //Still return something even if there is no data
+  //Would return undefined if no data/null
+  if (final){
+    console.log('Data found in the DB!', final?.value)
+    return final?.value
+       //return final IF there is data in final. 
+  } else {
+    console.log('Data wasnt found!')
+  }
+  // return final
 }
-  console.error('getDb not implemented');
 initdb();
 
 

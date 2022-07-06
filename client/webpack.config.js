@@ -35,6 +35,13 @@ module.exports = () => {
         description: 'Text Editor',
         start_url: '/',
         publicPath: '/',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons')
+          }
+        ]
       })
     ],
 
@@ -52,13 +59,13 @@ module.exports = () => {
             options: {
               presets: ['@babel/present-env'],
               plugins: [
-                '@babel/plugin-proposal-object-rest-soread',
+                '@babel/plugin-proposal-object-rest-spread',
                 '@babel/transform-runtime'
-              ]
-            }
-          }
-        }
-      ]
-    }
+              ],
+            },
+          },
+        },
+      ],
+    },
   };
 };
