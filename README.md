@@ -35,6 +35,9 @@
   To use this project, please 'git clone' the following repository link: 
 
   https://github.com/Noah8863/PWA-Text-Editor.git 
+  
+  ![A5FFE5A3-F4A9-47B1-8D1A-D8999726B1C0](https://user-images.githubusercontent.com/60634270/177936604-d6438d0c-8482-4ccc-ab6a-9c382f53720a.jpeg)
+
 
   ## How to use this project 
 
